@@ -39,3 +39,9 @@ ___
 
 * Sintaxis  
 *  Ejemplo
+
+___
+
+## Stroke ();  
+
+* Establece el color que se utiliza para dibujar puntos.
