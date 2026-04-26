@@ -128,7 +128,7 @@ function comprobarBordes() {
 
 ___
 
-## Desafío 2 durante clses
+## Desafío 2 durante clases
 
 ```
 let pelota = {
@@ -310,5 +310,5 @@ ____
 
 ___
 
-## Entegar antes de la clase del 24 de Mayo
+## Entregar antes de la clase del 24 de Mayo
 
