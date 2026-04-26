@@ -74,8 +74,7 @@ ___
 
 # Solemne 2
 
-1. El Desafío  
-El objetivo es demostrar:  
+1. El objetivo es demostrar:  
 * Razonamiento lógico  
 * Pensamiento sistémico
 
@@ -100,3 +99,114 @@ Lo más importante es cómo traduces un problema social a una regla de comportam
 3.Hacer un diagrama de flujo de su idea. (Diseño de sistema)
 
 4.Programar un sketch en p5.js de 400x400 pixeles. (Cómo mínimo) 
+
+___
+
+## El sketch debe incluir como mínimo: 
+
+* 4 variables creadas por mi  
+* 2 variables Integradas en p5.js (ej: width, height, mouseX)  
+* 4 figuras geométricas diferentes  
+* 2 imágenes  
+* Texto  
+* función random() y 1 función map()  
+* rotate, translate y scale protegidos por push() y pop()
+* 3 Sentencias condicionales (if, else if, else), (puede ser solo if o else if) 
+* 1 bucle for (ideal para patrones o repetición de elementos)  
+* 2 funciones propias definidas fuera de draw()  
+* 1 interacciones con el usuario (ej: mouseIsPressed, keyPressed, etc)
+
+___
+
+## Entrega
+
+La carpeta de entrega debe contener 3 links.
+
+1. El primero sera un link a un repositorio en Github que presente la Solemne de forma detallada y en lenguaje formal. (REPO SOLEMNE)
+2. El segundo sera un link al Sketch en p5.js con permiso de edición.
+3. El tercero sera el link al repositorio de la bitácora de clases, este debe contener todas las clases, desde Historia de la Computación en adelante.
+
+___
+
+## Repositorio de la Solemne 
+Debe contener:
+
+### 1. Diagrama de Flujo (Imagen en PNG )
+Un diagrama digital (Figma, Miro, etc.) que no solo diga "X aumenta", sino que explique la regla de diseño.  
+* Ejemplo: "SI el usuario se acerca al centro, ENTONCES el texto se vuelve ilegible (representando el acoso)".
+
+### 2. Código en Github
+Un repositorio que incluya un archivo sketch.js. El código debe estar identado y, sobre todo, comentado. Los comentarios deben ser detallados, deben cumplir con que no solo que funcione, sino que se entienda cómo funciona.
+
+### 3. Documentación (README.md)
+Debe incluir:
+
+**1. Información del proyecto**
+Nombre del proyecto.
+Autor/a.
+
+**2. Descripción objetiva**  
+Lo que se ve, sin interpretación  
+Responder:  
+
+¿Qué es el proyecto?  
+¿Qué aparece en pantalla?  
+¿Qué elementos visuales hay?  
+
+**Ejemplo:** formas, colores, movimientos, textos, etc.
+
+**3. Descripción conceptual**  
+La idea detrás del proyecto  
+Responder:  
+
+¿Cuál es la idea central?  
+¿Cómo se relaciona con el sistema visual?  
+¿Cuál es la regla principal? “A mayor interacción, menor visibilidad”  
+¿Cómo conecta esto con la problemática de género?  
+
+**Idea clave:** conectar lo técnico con lo social.  
+
+**4. Input / Output / Sistema**   
+Input (entrada):    
+¿Qué datos recibe el sistema?    
+Ej: mouse, teclado, tiempo, posición  
+
+Proceso:  
+¿Qué hace el sistema con esos datos?  
+
+Output (salida):  
+¿Qué se ve como resultado? 
+
+**Ejemplo:**  
+Input: movimiento del mouse  
+Proceso: aumenta distorsión  
+Output: imagen se vuelve ilegible  
+
+**5. Pensamiento computacional**  
+Qué incluir:
+
+Reglas del sistema:  
+Inputs  
+Procesos  
+Outputs  
+
+Explicación de la interacción:  
+¿Cómo el usuario afecta el sistema?
+
+**Idea clave:** explicar la lógica completa del comportamiento.
+
+**6. Referentes**  
+Listado y breve descripción de referentes visuales, teóricos o históricos.
+
+**7. Link al sketch en P5.js en formato EDITABLE**
+
+____
+
+# Pauta de evaluación
+
+![PautaEvaluación](https://github.com/user-attachments/assets/31d0c15d-5241-4d0e-9673-f91ba94e61f9)  
+
+___
+
+## Entegar antes de la clase del 24 de Mayo
+
