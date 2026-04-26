@@ -7,6 +7,211 @@
     *  'código p5' (Se usa entre medio de una oración)
 4. Comentar el código de manera formal.
 5. angleMode(DEGREES) solo configura el modo de medir los ángulos en grados.
+
+
+___
+
+## Encargo de la clase pasada 
+
+let angulo=0; //Creo una variable llamada angulo y le asigno el valor 0
+let x=0; //Creo una variable x y le asigno el valor 0
+let y=0; //Creo una variable y y le asigno el valor 0
+let creceEllip=0; //Creo una variable llamada creceEllip y le asigno el valor 0
+let giraRect=0; //Creo una variable llamada giraRect y le asigno el valor 0
+let font; //Creo una variable llamada font
+let img; //Creo una variable llamada img
+
+function preload() { //Función para cargar imágenes 
+  img = loadImage('flor.jpg'); //Creo la variable para colocar mi imagen
+}
+
+function setup() { //Función que se ejecuta una sola vez al inicio del programa
+  createCanvas(450, 600); //Crea un lienzo de 450 en x, 600 en y
+  angleMode(DEGREES); //Activa el modo ángulos para los arcos
+}
+
+function draw() { //Función que se ejecuta en loop constantemente
+  background(247, 237, 218); //Pinta el fondo de color crema en valores RGB
+  
+  //Texto "nip" escrito en 4 líneas, cada una en un color diferente.
+  textSize(17); //Asigna el tamaño del texto en 17 px
+  fill(237, 114, 170); //Pinta el texto en color rosado claro en valores RGB
+  text('nip', 120, 530); //Escribe el texto en las coordenadas x,y
+  fill(217, 76, 121); //Pinta el texto en color rosado en valores RGB
+  text('nip', 120, 550); //Escribe el texto en las coordenadas x,y
+  fill(191, 69, 108); //Pinta el texto en color rosado oscuro claro en valores RGB
+  text('nip', 120, 570); //Escribe el texto en las coordenadas x,y
+  fill(145, 51, 81); //Pinta el texto en color burdeo en valores RGB
+  text('nip', 120, 590); //Escribe el texto en las coordenadas x,y
+  
+  angulo = angulo+2; 
+  x = x+1;
+  y = y+0.5;
+  creceEllip = creceEllip+1; 
+  giraRect = giraRect+1
+  
+  noStroke(); //Elimina el borde de las figuras
+  
+  push(); //Comienza un estado de "capa"
+  translate(x, y); //Se traslada la figura desde el punto de origen de x,y
+  fill(0); //Pinta la figura de color negro
+  rect(90, 120, 270, 8); //Crea un rectángulo delgado horizontalmente en las coordenadas x,y
+  pop(); //Se cierra el estado de "capa"
+  
+  
+  fill(120, 94, 61); //Pinta la figura de color cafe en valores RGB
+  arc(225, 350, 270, 270, 0, 180); //Crea un arco en las coordenadas x,y
+  
+  push(); //Comienza un estado de "capa"
+  rectMode(CENTER); //Crea las figuras desde el centro
+  fill(0); //Pinta la figura de color negro
+  
+  if (mouseIsPressed === true) { //Condicional: Si se presiona el mouse se cumple lo siguente
+  fill(227, 154, 177); //Si lo anterior se cumple, se pinta el rectángulo de color rosado en valores RGB
+  rect(170, 415, 10, 188); //Crea un rectángulo en las coordenadas x,y
+  } else if (mouseX > 150 && mouseX < 200 && mouseY > 310 && mouseY < 510) { //Condicional: Si el valor de mouseX es mayor a 150 y menor a 200, además el valor de mouseY es mayor que 310 y menor a 510 se cumple lo siguente
+  noFill(); //Si lo anterior se cumple no se pinta el rectángulo
+  rect(170, 415, 10, 188); //Crea un rectángulo en las coordenadas x,y
+  } else {
+  fill(0); //Si nada de lo anterior se cumple, se pinta el rectángulo negro
+  rect(170, 415, 10, 188); //Crea un rectángulo en las coordenadas x,y
+  }
+  pop(); //Se cierra el estado de "capa"
+  
+  push(); //Comienza un estado de "capa"
+  rectMode(CENTER); //Crea las figuras desde el centro
+  stroke(227, 154, 177); //Asigna el color rosado al borde de la figura en valores RGB
+  strokeWeight(5); //Asigna el grosor del borde en 5 px
+  
+  if (mouseIsPressed === true) { //Condicional: Si se presiona el mouse se cumple lo siguente
+  fill(120, 94, 61); //Si lo anterior se cumple, se pinta la figura de color cafe en valores RGB
+  ellipse(260, 240, 150, 150); //Crea un círculo grande en las coordenadas x,y
+  } else if (mouseX > 180 && mouseX < 340 && mouseY > 160 && mouseY < 315) { //Condicional: Si el valor de mouseX es mayor a 180 y menor a 340, además el valor de mouseY es mayor que 160 y menor a 315 se cumple lo siguente
+  noFill(); //Si lo anterior se cumple no se pinta el círculo
+  ellipse(260, 240, 150, 150); //Crea un círculo grande en las coordenadas x,y
+  } else {
+  fill(227, 154, 177); //Si nada de lo anterior se cumple, se pinta el círculo de color rosado en valores RGB
+  ellipse(260, 240, 150, 150); //Crea un círculo grande en las coordenadas x,y
+  }   
+  pop(); //Se cierra el estado de "capa"
+ 
+  fill(227, 154, 177); //Pinta la figura de color rosado en valores RGB
+  ellipse(260, 60, 50, 50); //Crea un círculo pequeño en las coordenadas x,y 
+  ellipse(400, 240, 50, 50); //Crea un círculo pequeño en las coordenadas x,y 
+  
+  push(); //Comienza un estado de "capa"
+  rectMode(CENTER); //Las figuras se crean desde el centro
+  translate(260,240); //Se trasladan las figuras desde el punto de origen de x,y
+  rotate(angulo); //Rota la figura según el ángulo definido
+  fill(237, 114, 170);  //Pinta la figura de color rosado claro en valores RGB
+  rect(0, 0, 5, 154); //Crea un rectangulo delgado en en las coordenadas x,y
+  
+  rotate(angulo+2); //Rota la figura según el ángulo definido
+  fill(217, 76, 121); //Pinta la figura de color rosado en valores RGB
+  rect(0, 0, 5, 154); //Crea un rectangulo delgado en las coordenadas x,y
+  
+  rotate(angulo+3); //Rota la figura según el ángulo definido
+  fill(191, 69, 108); //Pinta la figura de color rosado oscuro en valores RGB
+  rect(0, 0, 5, 154); //Crea un rectangulo delgado en las coordenadas x,y
+  
+  rotate(angulo+4); //Rota la figura según el ángulo definido
+  fill(145, 51, 81); //Pinta la figura de color burdeo en valores RGB
+  rect(0, 0, 5, 154); //Crea un rectangulo delgado en las coordenadas x,y
+  
+  rotate(angulo+6); //Rota la figura según el ángulo definido
+  fill(99, 35, 56); //Pinta la figura de color burdeo medio en valores RGB
+  rect(0, 0, 5, 154); //Crea un rectangulo delgado en las coordenadas x,y
+  
+  rotate(angulo+8); //Rota la figura según el ángulo definido
+  fill(61, 21, 35); //Pinta la figura de color burdeo oscuro en valores RGB
+  rect(0, 0, 5, 154); //Crea un rectangulo delgado en las coordenadas x,y
+  pop(); //Se cierra el estado de "capa"
+  
+  
+  push(); //Comienza un estado de "capa"
+  rectMode(CENTER); //Las figuras se crean desde el centro
+  translate(260, 60); //Se trasladan las figuras desde el punto de origen de x,y
+  rotate(angulo); //Rota la figura según el ángulo definido
+  fill(237, 114, 170); //Pinta la figura de color rosado claro en valores RGB
+  rect(0, 0, 3, 50); //Crea un rectangulo delgado en en las coordenadas x,y
+  
+  rotate(angulo+2); //Rota la figura según el ángulo definido
+  fill(217, 76, 121); //Pinta la figura de color rosado en valores RGB
+  rect(0, 0, 3, 50); //Crea un rectangulo delgado en las coordenadas x,y
+  
+  rotate(angulo+3); //Rota la figura según el ángulo definido
+  fill(191, 69, 108); //Pinta la figura de color rosado oscuro en valores RGB
+  rect(0, 0, 3, 50); //Crea un rectangulo delgado en las coordenadas x,y
+  
+  rotate(angulo+4); //Rota la figura según el ángulo definido
+  fill(145, 51, 81); //Pinta la figura de color burdeo en valores RGB
+  rect(0, 0, 3, 50); //Crea un rectangulo delgado en las coordenadas x,y
+  
+  rotate(angulo+6); //Rota la figura según el ángulo definido
+  fill(99, 35, 56); //Pinta la figura de color burdeo medio en valores RGB
+  rect(0, 0, 3, 50); //Crea un rectangulo delgado en las coordenadas x,y
+  
+  rotate(angulo+8); //Rota la figura según el ángulo definido
+  fill(61, 21, 35); //Pinta la figura de color burdeo oscuro en valores RGB
+  rect(0, 0, 3, 50); //Crea un rectangulo delgado en las coordenadas x,y
+  pop(); //Se cierra el estado de "capa"
+  
+  
+  push(); //Comienza un estado de "capa"
+  rectMode(CENTER); //Las figuras se crean desde el centro
+  translate(400, 240); //Se trasladan las figuras desde el punto de origen de x,y
+  rotate(angulo); //Rota la figura según el ángulo definido
+  fill(237, 114, 170); //Pinta la figura de color rosado claro en valores RGB
+  rect(0, 0, 3, 50); //Crea un rectangulo delgado en en las coordenadas x,y
+  
+  rotate(angulo+2); //Rota la figura según el ángulo definido
+  fill(217, 76, 121); //Pinta la figura de color rosado en valores RGB
+  rect(0, 0, 3, 50); //Crea un rectangulo delgado en las coordenadas x,y
+  
+  rotate(angulo+3); //Rota la figura según el ángulo definido
+  fill(191, 69, 108); //Pinta la figura de color rosado oscuro en valores RGB
+  rect(0, 0, 3, 50); //Crea un rectangulo delgado en las coordenadas x,y
+  
+  rotate(angulo+4); //Rota la figura según el ángulo definido
+  fill(145, 51, 81); //Pinta la figura de color burdeo en valores RGB
+  rect(0, 0, 3, 50); //Crea un rectangulo delgado en las coordenadas x,y
+  
+  rotate(angulo+6); //Rota la figura según el ángulo definido
+  fill(99, 35, 56); //Pinta la figura de color burdeo medio en valores RGB
+  rect(0, 0, 3, 50); //Crea un rectangulo delgado en las coordenadas x,y
+  
+  rotate(angulo+8); //Rota la figura según el ángulo definido
+  fill(61, 21, 35); //Pinta la figura de color burdeo oscuro en valores RGB
+  rect(0, 0, 3, 50); //Crea un rectangulo delgado en las coordenadas x,y
+  pop(); //Se cierra el estado de "capa"
+  
+  push(); //Comienza un estado de "capa"
+  translate(70, 170); //Se traslada la figura desde el punto de origen de x,y
+  scale(mouseX/50); //Ajusta el tamaño de la figura según la posición x del mouse 
+  ellipse(0, 0, 50, 50); //Crea un círculo pequeño en las coordenadas x,y
+  pop(); //Se cierra el estado de "capa"
+  
+  push(); //Comienza un estado de "capa"
+  rectMode(CENTER); //Las figuras se crean desde el centro
+  translate(320, 430); //Se traslada la figura desde el punto de origen de x,y
+  rotate(giraRect*30); //Rota la figura según el ángulo definido
+  fill(191, 69, 108, 200); //Pinta la figura de color rosado con transparencia en valores RGB
+  square(0, 0, 140); //Crea un cuadrado en las coordenadas x,y
+  pop(); //Se cierra el estado de "capa"
+  
+  push(); //Comienza un estado de "capa"
+  imageMode(CENTER); //Situa la imagen desde el centro
+  image(img, 320, 430, 100, 100); //Coloca la imagen en las coordenadas x,y
+  pop(); //Se cierra el estado de "capa"
+  
+  fill(0); //Pinta la figura de color negro
+  rect(150, 80, 5, 430); //Crea un rectángulo delgado verticalmente en las coordenadas x,y
+  rect(135, 80, 5, 430); //Crea un rectángulo delgado verticalmente en las coordenadas x,y
+  rect(120, 80, 5, 430); //Crea un rectángulo delgado verticalmente en las coordenadas x,y
+  
+}
+
+
 ___
 
 # 4 pilares fundamentales 
