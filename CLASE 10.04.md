@@ -4,10 +4,10 @@
 
 * Mouse X; Mouse Y
 
-* Variable de sistema númerico que determinan la posición del mouse en las coordenadas x, y
+* Variable de sistema numérico que determinan la posición del mouse en las coordenadas x, y
 
 Ejemplo: noStroke(); fill(247, 126, 193, 50); ellipse(mouseX, mouseY, 100, 100);  
-No solo se puede usar en las figuras, si no que también en color, diametros, etc.
+No solo se puede usar en las figuras, si no que también en color, diámetros, etc.
 
 ___
 
@@ -77,3 +77,14 @@ ___
 * valor: La variable que quieres "mapear" (por ejemplo, mouseX).  
 * min_original y max_original: El rango en el que se encuentra ese valor actualmente.  
 * min_nuevo y max_nuevo: El rango al que lo quieres transformar.
+
+## Encargo de la clase
+Hacer un duplicado del dibujo que entregue para la solemne y darle movimiento al dibujo en p5.js usando cada una de las variables y funciones que aprendimos durante esta clase:
+
+* mouseX mouseY  
+* let creado por mi  
+* Javascript object  
+* Random fuction  
+* Width height  
+* WindowWidth WindowHeight  
+* Map función  
