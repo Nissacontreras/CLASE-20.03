@@ -1,6 +1,4 @@
-# Clase 27 de marzo 
-
-## Algoritmo 
+# Algoritmo 
 
 **Diagrama de flujo**  
 * Representación gráfica de un algoritmo o de los pasos de un proceso. En programación, se utiliza como una herramienta de planificación para visualizar lalógica de un programa antes de escribir una sola línea de código.  
