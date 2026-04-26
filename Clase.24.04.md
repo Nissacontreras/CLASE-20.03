@@ -72,6 +72,62 @@ Ej: function Nombredelafunción(){}
 
 ___
 
+## Desafíos durante clases
+
+```
+let x=0; // Declaro e inicializo la variable x y le asigno el valor 0
+let y=0; // Declaro e inicializo la variable y y le asigno el valor 0
+let speedX=3; // Declaro e inicializo la variable speedX y le asigno el valor 3
+let speedY=6; // Declaro e inicializo la variable speedY y le asigno el valor 6
+
+function setup() { // Esta función de inicio que se ejecuta una sola vez cuando comienza el programa
+  createCanvas(400, 400); // Crea un lienzo de 400 px en x, 400 px en y
+}
+
+function draw() { // Esta es la función que se ejecuta en loop 60 veces por segundo
+  background(217, 30, 123); // Agrego un color fucsia al fondo en valores RGB 
+  
+  // Llamamos a nuestros módulos (funciones)
+  dibujarObjetos();
+  moverObjetos();
+  comprobarBordes();
+  
+}
+  
+function dibujarObjetos() {
+  noStroke(); // Configuro que la elipse no tiene borde
+  fill(255, 191, 15); // Asigno el color naranjo a la figura en valores RGB
+  ellipse(x, 200, 50, 50); // Creo una ellipse en la posición de variable x, y, ancho y alto
+  
+
+  fill(255, 191, 15); // Asigno el color naranjo a la figura en valores RGB
+  ellipse(200, y, 90, 90); // Creo una ellipse en la posición de variable x, y, ancho y alto
+}
+  
+function moverObjetos() {
+  x=x+speedX // La variable x va a ser igual a la variable x + la variable speedX
+  y=y+speedY // La variable y va a ser igual a la variable y + la variable speedY
+}
+  
+function comprobarBordes() {
+  // Rebote horizontal
+  if (x > width || x < 0) { // Si x es mayor que el ancho del lienzo  (400) o x es menor que 0
+  print("fueradecuadro") // Imprime en la consola la cadena de texto "fuera de cuadro"
+  speedX = speedX * -1; // La variable speedX va a ser igual a la variable speedX multiplicado por -1
+  }
+  
+  // Rebote vertical
+  if (y > height || y < 0) { // Si y es mayor que el ancho del lienzo  (400) o y es menor que 0
+  print("fueradecuadro") // Imprime en la consola la cadena de texto "fuera de cuadro"
+  speedY = speedY * -1; // La variable speedY va a ser igual a la variable speedY multiplicado por -1
+  }
+}
+```
+
+![Pelotita con rebote](https://github.com/user-attachments/assets/d604e28e-c209-4ae3-90dc-6cdcf317cc90)
+
+___
+
 # Solemne 2
 
 1. El objetivo es demostrar:  
