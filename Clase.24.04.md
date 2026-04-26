@@ -72,7 +72,7 @@ Ej: function Nombredelafunción(){}
 
 ___
 
-## Desafíos durante clases
+## Desafío 1 durante clases
 
 ```
 let x=0; // Declaro e inicializo la variable x y le asigno el valor 0
@@ -126,6 +126,52 @@ function comprobarBordes() {
 
 ![Pelotita con rebote](https://github.com/user-attachments/assets/d604e28e-c209-4ae3-90dc-6cdcf317cc90)
 
+___
+
+## Desafío 2 durante clses
+
+```
+let pelota = {
+  x: 300,
+  y: 200,
+  Xspeed: 4,
+  Yspeed: 3,
+}
+
+function setup() {
+  createCanvas(600, 400);
+}
+
+function draw() {
+  background(209, 56, 114);
+  DibujarFiguras();
+  Rebote();
+  Movimiento();
+}
+
+function DibujarFiguras() {
+  stroke(70, 162, 247);
+  strokeWeight(4);
+  fill(40, 199, 64);
+  ellipse(pelota.x, pelota.y, 24, 24);
+}
+
+function Movimiento() {
+  pelota.x = pelota.x + pelota.Xspeed;
+  pelota.y = pelota.y + pelota.Yspeed;
+}
+
+function Rebote() {
+  if (pelota.x > width || pelota.x < 0) {
+    pelota.Xspeed = pelota.Xspeed * -1;
+  }
+  if (pelota.y > height || pelota.y < 0) {
+    pelota.Yspeed = pelota.Yspeed * -1;
+  }
+}
+```
+
+![Rebotes](https://github.com/user-attachments/assets/12199635-064d-467e-bd3a-3d37c2a05a91) 
 ___
 
 # Solemne 2
